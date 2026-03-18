@@ -63,4 +63,15 @@ $Friedman$ 检验与 $Nemenyi$ 后续检验
 若所有算法的性能相同这个假设被拒绝，则说明算法的性能显著不同.这时需进行后续检验来进一步区分各算法。
 
 <img width="1194" height="500" alt="image" src="https://github.com/user-attachments/assets/7961d384-bae9-4989-93ba-b3051a9da066" />
-<img width="1194" height="500" alt="image" src="https://github.com/user-attachments/assets/7961d384-bae9-4989-93ba-b3051a9da066" />
+
+### 偏差和方差
+
+$E(f;D)=bias^2(x)+var(x)+\epsilon^{2}$
+
+偏差度量了学习算法的期望预测与真实结果的偏离程度，即刻画了学习算法本身的拟合能力；
+
+方差度量了同样大小的训练集的变动所导致的学习性能的变化，即刻画了数据扰动所造成的影响；
+
+噪声则表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界，即刻画了学习问题本身的难度
+
+一般来说偏差和方差有冲突，这也就是一开始说的过拟合问题。
