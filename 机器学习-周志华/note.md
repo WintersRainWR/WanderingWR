@@ -41,3 +41,26 @@ $ROC$ 全称是受试者工作特征，纵轴叫真正例率 $TPR=\frac{TP}{TP+F
 代价曲线纵轴为 $P=\frac{p\times cost_{FN}}{p\times cost_{FN}+(1-p)\times cost_{FP}}$，横轴为 $cost_{norm}=\frac{FNR\times p\times cost_{FN}+FPR\times (1-p)\times cost_{FP}}{p\times cost_{FN}+(1-p)\times cost_{FP}}$
 
 ### 比较检验
+
+可以采用二项检验，因为显然对于泛化错误率为 $\epsilon$ 的模型，其运行 $n$ 次是符合二项分布的。
+
+如果有很多个（设为 $k$ ）测试错误率，考虑用 $t$ 分布，$\tau_i=\frac{\sqrt{k}(\mu-\epsilon_0)}{\sigma}$ 服从自由度 $k-1$ 的 $t$ 分布。
+
+$McNemar$ 实验：疑似高中内容（笑）
+
+<img width="932" height="704" alt="image" src="https://github.com/user-attachments/assets/f86fb0fe-ced7-4d75-8c59-600c93a2a839" />
+
+$Friedman$ 检验与 $Nemenyi$ 后续检验
+
+好多狗日的算式，不想手打 $\LaTeX$ 了，截图得了
+
+对于若干个算法适用。首先对于不同的算法在每个训练集上的成果打分排序，列出表格。
+
+<img width="960" height="648" alt="image" src="https://github.com/user-attachments/assets/d169774d-379c-4e6c-bb81-b07698c568c3" />
+
+<img width="886" height="46" alt="image" src="https://github.com/user-attachments/assets/4c8dc14f-deea-48c0-991a-828972c44a10" />
+
+若所有算法的性能相同这个假设被拒绝，则说明算法的性能显著不同.这时需进行后续检验来进一步区分各算法。
+
+<img width="1194" height="500" alt="image" src="https://github.com/user-attachments/assets/7961d384-bae9-4989-93ba-b3051a9da066" />
+<img width="1194" height="500" alt="image" src="https://github.com/user-attachments/assets/7961d384-bae9-4989-93ba-b3051a9da066" />
